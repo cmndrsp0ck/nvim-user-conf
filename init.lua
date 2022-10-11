@@ -47,6 +47,7 @@ local config = {
       spell = false, -- sets vim.opt.spell
       signcolumn = "auto", -- sets vim.opt.signcolumn to auto
       wrap = false, -- sets vim.opt.wrap
+      colorcolumn = "80,100", -- enable colorcolumn
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -54,6 +55,9 @@ local config = {
       autopairs_enabled = true, -- enable autopairs at start
       diagnostics_enabled = true, -- enable diagnostics at start
       status_diagnostics_enabled = true, -- enable diagnostics in statusline
+      softtabstop = 2, -- set how many columns of whitespace a \t char is worth
+      shiftwidth = 2, -- set how columns of whitespace a level of indentation is worth
+      expandtab = true, -- tabs keypresses will be expanded into spaces
     },
   },
   -- If you need more control, you can use the function()...end notation
@@ -256,7 +260,7 @@ local config = {
     ["mason-null-ls"] = { -- overrides `require("mason-null-ls").setup(...)`
       -- ensure_installed = { "prettier", "stylua" },
     },
-      -- Setting up themes
+    -- Setting up themes
   },
 
   -- LuaSnip Options
@@ -306,12 +310,14 @@ local config = {
   polish = function()
     -- set key bindings
     -- TODO: add toggle wrap function
-
-    -- set customer autocommands
+    -- set  custom augroups
+    local ws_clipper = vim.api.nvim_create_augroup("ws_clipper", { clear = true })
+    -- set custom autocommands
     vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-        desc = "Remove trailing white space",
-        pattern = {"*"},
-        command = [[%s/\s\+$//e]],
+      desc = "Remove trailing white space",
+      group = ws_clipper,
+      pattern = { "*" },
+      command = [[%s/\s\+$//e]],
     })
     -- Set up custom filetypes
     -- vim.filetype.add {
