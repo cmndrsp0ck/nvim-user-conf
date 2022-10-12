@@ -55,7 +55,7 @@ local config = {
       autopairs_enabled = true, -- enable autopairs at start
       diagnostics_enabled = true, -- enable diagnostics at start
       status_diagnostics_enabled = true, -- enable diagnostics in statusline
-      softtabstop = 2, -- set how many columns of whitespace a \t char is worth
+      tabstop = 2, -- set how many columns of whitespace a \t char is worth
       shiftwidth = 2, -- set how columns of whitespace a level of indentation is worth
       expandtab = true, -- tabs keypresses will be expanded into spaces
     },
