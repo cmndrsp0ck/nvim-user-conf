@@ -26,7 +26,7 @@ local config = {
         },
 
         -- Set colorscheme to use
-        colorscheme = "vim-monokai-tasty",
+        colorscheme = "gruvbox",
 
         -- Add highlight groups in any theme
         highlights = {
