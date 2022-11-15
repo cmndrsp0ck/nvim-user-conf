@@ -26,7 +26,7 @@ local config = {
         },
 
         -- Set colorscheme to use
-        colorscheme = "gruvbox",
+        colorscheme = "default_theme",
 
         -- Add highlight groups in any theme
         highlights = {
