@@ -26,7 +26,7 @@ local config = {
         },
 
         -- Set colorscheme to use
-        colorscheme = "default_theme",
+        colorscheme = "vim-monokai-tasty",
 
         -- Add highlight groups in any theme
         highlights = {
@@ -129,7 +129,7 @@ local config = {
 
         -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
         diagnostics = {
-                virtual_text = true,
+                virtual_text = false,
                 underline = true,
         },
 
