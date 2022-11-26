@@ -233,6 +233,7 @@ local config = {
                                         }
                                 end
                         },
+                        {"ellisonleao/glow.nvim"},
                         { "tpope/vim-surround" },
                         -- TODO: set up debugging DAP
                         -- Debugging
