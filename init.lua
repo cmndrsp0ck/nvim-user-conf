@@ -56,7 +56,7 @@ local config = {
                         mapleader = " ", -- sets vim.g.mapleader
                         cmp_enabled = true, -- enable completion at start
                         autopairs_enabled = true, -- enable autopairs at start
-                        diagnostics_enabled = true, -- enable diagnostics at start
+                        diagnostics_enabled = false, -- enable diagnostics at start
                         status_diagnostics_enabled = true, -- enable diagnostics in statusline
                 },
         },
@@ -128,10 +128,10 @@ local config = {
         },
 
         -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
-        diagnostics = {
-                virtual_text = true,
-                underline = true,
-        },
+        -- diagnostics = {
+        --         virtual_text = false,
+        --         underline = true,
+        -- },
 
         -- Extend LSP configuration
         lsp = {
