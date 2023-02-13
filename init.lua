@@ -247,6 +247,7 @@ local config = {
                                     "nvim-telescope/telescope.nvim"
                                   }
                         },
+                        { 'michaelb/sniprun', run = 'bash ./install.sh'},
                         {"ellisonleao/glow.nvim"},
                         { "tpope/vim-surround" },
                         -- TODO: set up debugging DAP
