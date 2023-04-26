@@ -11,20 +11,20 @@ return {
             }
         end
     },
-    {
-        "jackMort/ChatGPT.nvim",
-        lazy = false,
-        config = function()
-            require("chatgpt").setup({
-                -- optional configuration
-            })
-        end,
-        requires = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim"
-        }
-    },
+    -- {
+    --     "jackMort/ChatGPT.nvim",
+    --     lazy = false,
+    --     config = function()
+    --         require("chatgpt").setup({
+    --             -- optional configuration
+    --         })
+    --     end,
+    --     requires = {
+    --         "MunifTanjim/nui.nvim",
+    --         "nvim-lua/plenary.nvim",
+    --         "nvim-telescope/telescope.nvim"
+    --     }
+    -- },
     { 'michaelb/sniprun', run = 'bash ./install.sh', lazy = false },
     {"ellisonleao/glow.nvim", lazy = false },
     { "tpope/vim-surround", lazy = false },
