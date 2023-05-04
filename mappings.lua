@@ -11,13 +11,18 @@ return {
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
         ["<leader>U"] = { "<cmd>UndotreeToggle<cr>", desc = "Toggle Undotree" },
         -- ["<leader>uP"] = { "<cmd>lua TogglePaste()<cr>", desc = "Toggle Paste" }
+        -- Search for word in current buffer
+        ["<leader>fs"] = { "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case<cr>", desc = "Find words in current buffer" },
+        ["<leader>fS"] = { "<cmd>Telescope aerial<cr>", desc = "Find symbols" },
+        -- Switching buffers
         L = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
         H = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
+        -- ToggleTerm mapping
+        ["<C-\\>"] = { "<cmd>ToggleTerm direction=horizontal size=30<cr>", desc = "Open terminal in horizontal mode" },
     },
     t = {
         -- setting a mapping to false will disable it
-        -- ["<esc>"] = false,
-        ["<C-\\>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "Open terminal in float mode." },
+        ["<esc>"] = false,
         ["<C-l>"] = false,
     }
 }
