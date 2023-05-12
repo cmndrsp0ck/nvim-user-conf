@@ -13,7 +13,7 @@ return {
         -- ["<leader>uP"] = { "<cmd>lua TogglePaste()<cr>", desc = "Toggle Paste" }
         -- Search for word in current buffer
         ["<leader>fs"] = { "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false case_mode=ignore_case<cr>", desc = "Find words in current buffer" },
-        ["<leader>fS"] = { "<cmd>Telescope aerial<cr>", desc = "Find symbols" },
+        ["<leader>fS"] = { "<cmd>Telescope aerial sorting_strategy=descending<cr>", desc = "Find symbols" },
         -- Switching buffers
         L = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
         H = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
