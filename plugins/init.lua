@@ -33,20 +33,18 @@ return {
         cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
         opts = { use_default_keymaps = false },
     },
-    -- {
-    --     "jackMort/ChatGPT.nvim",
-    --     lazy = false,
-    --     config = function()
-    --         require("chatgpt").setup({
-    --             -- optional configuration
-    --         })
-    --     end,
-    --     requires = {
-    --         "MunifTanjim/nui.nvim",
-    --         "nvim-lua/plenary.nvim",
-    --         "nvim-telescope/telescope.nvim"
-    --     }
-    -- },
+    {
+        "jackMort/ChatGPT.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("chatgpt").setup()
+        end,
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
+    },
     { 'michaelb/sniprun', run = 'bash ./install.sh', lazy = false },
     {"ellisonleao/glow.nvim", lazy = false },
     { "mbbill/undotree", lazy = false },
