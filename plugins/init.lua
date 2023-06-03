@@ -1,5 +1,31 @@
 return {
     {
+        "github/copilot.vim",
+        lazy = false,
+        -- event = "InsertEnter",
+        -- config = function()
+        -- end
+    },
+    {
+        "AstroNvim/astrocommunity"
+    },
+    { import = "astrocommunity.completion.copilot-lua" },
+    { -- further customize the options set by the community
+        "copilot.lua",
+        opts = {
+            suggestion = {
+                keymap = {
+                    accept = "<C-l>",
+                    accept_word = false,
+                    accept_line = false,
+                    next = "<C-.>",
+                    prev = "<C-,>",
+                    dismiss = "<C/>",
+                },
+            },
+        },
+    },
+    {
         "folke/todo-comments.nvim",
         lazy = false,
         requires = "nvim-lua/plenary.nvim",
