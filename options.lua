@@ -5,7 +5,7 @@ return {
         number = true,          -- sets vim.opt.number
         spell = false,          -- sets vim.opt.spell
         signcolumn = "auto",    -- sets vim.opt.signcolumn to auto
-        wrap = false,           -- sets vim.opt.wrap
+        wrap = true,            -- sets vim.opt.wrap
         colorcolumn = "80,100", -- enable colorcolumn
         tabstop = 4,            -- set how many columns of whitespace a \t char is worth
         shiftwidth = 4,         -- set how columns of whitespace a level of indentation is worth
