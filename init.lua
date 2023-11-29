@@ -53,6 +53,7 @@ return {
             extension = {
                 yml = yaml_ft,
                 yaml = yaml_ft,
+                xsh = "python",
             },
         }
         vim.filetype.add {

@@ -14,11 +14,12 @@ return {
         scrolloff = 8,          -- set how many lines from the bottom/top of the screen to keep the cursor
     },
     g = {
-        mapleader = " ",                                                          -- sets vim.g.mapleader
-        cmp_enabled = true,                                                       -- enable completion at start
-        autopairs_enabled = true,                                                 -- enable autopairs at start
-        diagnostics_enabled = true,                                               -- enable diagnostics at start
-        status_diagnostics_enabled = true,                                        -- enable diagnostics in statusline
-        python3_host_prog = "/home/cmndrsp0ck/.pyenv/versions/neovim/bin/python", -- set python3
+        mapleader = " ",                                           -- sets vim.g.mapleader
+        cmp_enabled = true,                                        -- enable completion at start
+        autopairs_enabled = true,                                  -- enable autopairs at start
+        diagnostics_enabled = true,                                -- enable diagnostics at start
+        status_diagnostics_enabled = true,                         -- enable diagnostics in statusline
+        python3_host_prog = "~/.pyenv/versions/neovim/bin/python", -- set python3
+        -- python3_host_prog = "~/.pyenv/versions/slackbot-ds2-marge/bin/python", -- set python3
     }
 }
