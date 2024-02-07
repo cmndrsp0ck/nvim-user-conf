@@ -68,12 +68,13 @@ return {
         dependencies = {
             "MunifTanjim/nui.nvim",
             "nvim-lua/plenary.nvim",
+            "folke/trouble.nvim",
             "nvim-telescope/telescope.nvim"
         }
     },
-    { 'michaelb/sniprun', run = 'bash ./install.sh', lazy = false },
-    {"ellisonleao/glow.nvim", lazy = false },
-    { "mbbill/undotree", lazy = false },
+    { 'michaelb/sniprun',                              run = 'bash ./install.sh', lazy = false },
+    { "ellisonleao/glow.nvim",                         lazy = false },
+    { "mbbill/undotree",                               lazy = false },
     -- Setting colorschemes
     { "folke/tokyonight.nvim" },
     { "lunarvim/darkplus.nvim" },
@@ -82,4 +83,3 @@ return {
     { "tanvirtin/monokai.nvim" },
     { "jacoborus/tender.vim" },
 }
-
