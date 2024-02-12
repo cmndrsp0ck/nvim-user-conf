@@ -72,6 +72,14 @@ return {
             "nvim-telescope/telescope.nvim"
         }
     },
+    -- {
+    --     "kiddos/gemini.nvim",
+    --     build = { 'pip install -r requirements.txt', ':UpdateRemotePlugins' },
+    --     event = "VeryLazy",
+    --     config = function()
+    --         require("gemini").setup()
+    --     end
+    -- },
     { 'michaelb/sniprun',                              run = 'bash ./install.sh', lazy = false },
     { "ellisonleao/glow.nvim",                         lazy = false },
     { "mbbill/undotree",                               lazy = false },
