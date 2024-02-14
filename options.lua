@@ -20,6 +20,5 @@ return {
         diagnostics_enabled = true,                                -- enable diagnostics at start
         status_diagnostics_enabled = true,                         -- enable diagnostics in statusline
         python3_host_prog = "~/.pyenv/versions/neovim/bin/python", -- set python3
-        -- python3_host_prog = "~/.pyenv/versions/slackbot-ds2-marge/bin/python", -- set python3
     }
 }
