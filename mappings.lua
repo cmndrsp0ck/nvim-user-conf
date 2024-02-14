@@ -19,10 +19,17 @@ return {
         H = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
         -- ToggleTerm mapping
         ["<C-\\>"] = { "<cmd>ToggleTerm direction=horizontal size=30<cr>", desc = "Open terminal in horizontal mode" },
+        ["<leader>tc"] = { "<cmd>ChatGPT<cr>", desc = "Open ChatGPT prompt" },
+        ["<leader>te"] = { "<cmd>ChatGPTEditWithInstructions<cr>", desc = "Open ChatGPTEditWithInstructions" },
     },
     t = {
         -- setting a mapping to false will disable it
         ["<esc>"] = false,
         ["<C-l>"] = false,
+    },
+    v = {
+        ["<leader>te"] = { "<cmd>ChatGPTRun explain_code<cr>", desc = "ChatGPT explain code" },
+        ["<leader>ts"] = { "<cmd>ChatGPTRun summarize<cr>", desc = "ChatGPT summarize text" },
+
     }
 }
