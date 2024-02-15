@@ -72,14 +72,14 @@ return {
             "nvim-telescope/telescope.nvim"
         }
     },
-    -- {
-    --     "kiddos/gemini.nvim",
-    --     build = { 'pip install -r requirements.txt', ':UpdateRemotePlugins' },
-    --     event = "VeryLazy",
-    --     config = function()
-    --         require("gemini").setup()
-    --     end
-    -- },
+    {
+        "kiddos/gemini.nvim",
+        build = { 'pip install -r requirements.txt', ':UpdateRemotePlugins' },
+        event = "VeryLazy",
+        config = function()
+            require("gemini").setup()
+        end
+    },
     {
         "backdround/global-note.nvim",
         event = "VeryLazy",
@@ -87,9 +87,33 @@ return {
             require("global-note").setup()
         end,
     },
-    { 'michaelb/sniprun',                              run = 'bash ./install.sh', lazy = false },
-    { "ellisonleao/glow.nvim",                         lazy = false },
-    { "mbbill/undotree",                               lazy = false },
+    {
+        'michaelb/sniprun',
+        run = 'bash ./install.sh',
+        lazy = false,
+    },
+    {
+        "ellisonleao/glow.nvim",
+        config = true,
+        cmd = "Glow",
+        config = function()
+            require("glow").setup({
+                -- glow_path = "",                -- will be filled automatically with your glow bin in $PATH, if any
+                -- install_path = "~/.local/bin", -- default path for installing glow binary
+                border = "shadow", -- floating window border config
+                -- style = "dark|light", -- filled automatically with your current editor background, you can override using glow json style
+                -- pager = false,
+                width = 80,
+                height = 150,
+                width_ratio = 0.8, -- maximum width of the Glow window compared to the nvim window size (overrides `width`)
+                height_ratio = 0.8,
+            })
+        end,
+    },
+    {
+        "mbbill/undotree",
+        lazy = false,
+    },
     -- Setting colorschemes
     { "folke/tokyonight.nvim" },
     { "lunarvim/darkplus.nvim" },
