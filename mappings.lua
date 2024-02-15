@@ -21,6 +21,7 @@ return {
         ["<C-\\>"] = { "<cmd>ToggleTerm direction=horizontal size=30<cr>", desc = "Open terminal in horizontal mode" },
         ["<leader>tc"] = { "<cmd>ChatGPT<cr>", desc = "Open ChatGPT prompt" },
         ["<leader>te"] = { "<cmd>ChatGPTEditWithInstructions<cr>", desc = "Open ChatGPTEditWithInstructions" },
+        ["<leader>tm"] = { "<cmd>GlobalNote<cr>", desc = "Toggle global note" },
     },
     t = {
         -- setting a mapping to false will disable it

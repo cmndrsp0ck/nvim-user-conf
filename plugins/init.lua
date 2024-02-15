@@ -80,6 +80,13 @@ return {
     --         require("gemini").setup()
     --     end
     -- },
+    {
+        "backdround/global-note.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("global-note").setup()
+        end,
+    },
     { 'michaelb/sniprun',                              run = 'bash ./install.sh', lazy = false },
     { "ellisonleao/glow.nvim",                         lazy = false },
     { "mbbill/undotree",                               lazy = false },
