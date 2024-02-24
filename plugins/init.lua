@@ -72,14 +72,14 @@ return {
             "nvim-telescope/telescope.nvim"
         }
     },
-    -- {
-    --     "kiddos/gemini.nvim",
-    --     build = { 'pip install -r requirements.txt', ':UpdateRemotePlugins' },
-    --     event = "VeryLazy",
-    --     config = function()
-    --         require("gemini").setup()
-    --     end
-    -- },
+    {
+        "kiddos/gemini.nvim",
+        build = { 'pip install -r requirements.txt', ':UpdateRemotePlugins' },
+        event = "VeryLazy",
+        config = function()
+            require("gemini").setup()
+        end
+    },
     {
         "backdround/global-note.nvim",
         event = "VeryLazy",
